@@ -1,18 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cinnamon by Nature</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header, footer { background: #5c4033; color: white; padding: 20px 0; text-align: center; }
-    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; max-width: 900px; margin: auto; }
-    h2 { color: #5c4033; }
-    .product { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
-    form input, form textarea { width: 100%; padding: 10px; margin-top: 10px; }
-    form button { background-color: #5c4033; color: white; padding: 10px 20px; border: none; margin-top: 10px; }
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #1e1b18;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #12100e;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #D4AF37;
+      margin-bottom: 20px;
+    }
+
+    .product-card {
+      background-color: #2b2622;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #D4AF37;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    form {
+      background-color: #2b2622;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #1e1b18;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 4px;
+    }
+
+    form button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      background-color: #D4AF37;
+      color: #12100e;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #12100e;
+      text-align: center;
+      color: #aaa;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .info-block {
+      background-color: #2b2622;
+      padding: 25px;
+      border-left: 5px solid #D4AF37;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      color: #f5f5f5;
+    }
   </style>
 </head>
 <body>
@@ -30,49 +133,55 @@
 
 <section id="products">
   <h2>Our Products</h2>
-  <div class="product">
+  <div class="product-card">
     <h3>Premium Cinnamon Sticks</h3>
-    <p>100g pack - Pure Ceylon cinnamon from Kelaniya. LKR 1200</p>
+    <p>100g pack – Pure Ceylon cinnamon, harvested and dried naturally for maximum aroma. <br><strong>Price:</strong> LKR 1200</p>
   </div>
-  <div class="product">
+  <div class="product-card">
     <h3>Cinnamon Powder</h3>
-    <p>100g finely ground - No additives. LKR 1000</p>
+    <p>100g of finely ground cinnamon – No additives, 100% pure. <br><strong>Price:</strong> LKR 1000</p>
   </div>
 </section>
 
 <section id="order">
-  <h2>Order Now</h2>
+  <h2>Place Your Order</h2>
   <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
     <input type="text" name="Name" placeholder="Your Name" required>
     <input type="email" name="Email" placeholder="Your Email" required>
-    <textarea name="OrderDetails" placeholder="What would you like to order?" rows="4" required></textarea>
+    <textarea name="OrderDetails" placeholder="Tell us what you'd like to order..." rows="4" required></textarea>
     <button type="submit">Send Order</button>
   </form>
 </section>
 
 <section id="story">
   <h2>Our Story</h2>
-  <p>We started with a simple vision – to bring pure, natural cinnamon from our farm in Sri Lanka directly to your kitchen. Grown with care and harvested traditionally, our cinnamon tells a story of heritage and sustainability.</p>
+  <div class="info-block">
+    <p>In the heart of Kelaniya, Sri Lanka, we cultivate cinnamon with care and tradition. "Cinnamon by Nature" is more than a brand — it's a legacy of quality, authenticity, and sustainability passed down through generations. From bark to bottle, our cinnamon reflects the richness of nature and heritage.</p>
+  </div>
 </section>
 
 <section id="benefits">
-  <h2>Health Benefits of Cinnamon</h2>
-  <ul>
-    <li>Rich in antioxidants and anti-inflammatory compounds</li>
-    <li>May lower blood sugar levels naturally</li>
-    <li>Promotes heart health and fights infection</li>
-    <li>Boosts metabolism and digestion</li>
-  </ul>
+  <h2>Health Benefits</h2>
+  <div class="info-block">
+    <ul>
+      <li>🌿 High in antioxidants, fighting cell damage and aging.</li>
+      <li>💪 Supports heart health by lowering cholesterol and blood pressure.</li>
+      <li>🔥 Aids digestion and boosts metabolism naturally.</li>
+      <li>🩸 Helps regulate blood sugar and reduce inflammation.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Email: youremail@example.com</p>
-  <p>WhatsApp: +94 7XX XXX XXX</p>
+  <div class="info-block">
+    <p>Email: <strong>youremail@example.com</strong></p>
+    <p>WhatsApp: <strong>+94 7XX XXX XXX</strong></p>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 Cinnamon by Nature. All rights reserved.</p>
+  <p>&copy; 2025 Cinnamon by Nature. Crafted with care in Sri Lanka.</p>
 </footer>
 
 </body>
